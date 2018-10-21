@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('xyz');
-});
+Route::get('/', 'WelcomeController');
 
-Route::get('/example', function () {
-    return view('abc');
-});
+Route::get('/books/{title}', 'BookController@show');
+Route::get('/books', 'BookController@index');
+
+Route::any('/practice/{n?}', 'PracticeController@index');
+
