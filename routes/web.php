@@ -16,5 +16,12 @@ Route::get('/', 'WelcomeController');
 Route::get('/books/{title}', 'BookController@show');
 Route::get('/books', 'BookController@index');
 
+/*
+ * Pages
+ * Simple, static pages without a lot of logic
+ */
+Route::view('/about', 'about');
+Route::view('/contact', 'contact');
+
 Route::any('/practice/{n?}', 'PracticeController@index');
 

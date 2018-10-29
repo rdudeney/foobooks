@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
+@extends('layouts.master')
 
-    <title>Foodbooks</title>
-    <meta charset='utf-8'>
+@section('content')
+    <h1>Welcome to {{ config('app.name') }}</h1>
 
-</head>
-<body>
+    <p>
+        @include('modules.description')
+    </p>
 
-    <h1>Foobooks</h1>
-
-
-</body>
-</html>
+@endsection
